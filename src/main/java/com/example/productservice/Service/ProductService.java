@@ -8,6 +8,8 @@ import com.example.productservice.model.Product;
 import com.example.productservice.model.ProductCategory;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -79,8 +81,11 @@ public class ProductService {
         return "success";
     }
 
-    public List<Product> getProductsByCategory(String categoryName) {
-        return productRepository.findByProductCategoryName(categoryName);
+    public List<Product> getProductsByCategory(String categoryName, int pageSize) {
+
+        //Added pagination to improve performance to handle large data sets.
+        Pageable pageable = PageRequest.of(0, pageSize);
+        return productRepository.findByProductCategoryName(categoryName, pageable);
     }
 
     public List<Product> getPremiumProducts() {

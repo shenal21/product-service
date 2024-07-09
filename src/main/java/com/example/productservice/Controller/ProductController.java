@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -45,8 +46,9 @@ public class ProductController {
     }
 
     @GetMapping("/category/{categoryName}")
-    public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable String categoryName) {
-        List<Product> products = productService.getProductsByCategory(categoryName);
+    public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable String categoryName,
+                                                               @RequestParam(defaultValue = "10") int limit) {
+        List<Product> products = productService.getProductsByCategory(categoryName, limit);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 

@@ -82,6 +82,44 @@ Sample Response:
     }
 ]
 ```
+### Get Products by category API
+```
+GET [/api/products/category/kitchen?limit=20]
+Request Params: limit (optional) default size is 10
+Remarks: Retrieves products that belong to a specific category.
+Sample Response:
+[
+    {
+        "id": 1,
+        "name": "Test Product 1",
+        "description": "A sample test product",
+        "price": 500.00,
+        "productCategory": {
+            "id": 1,
+            "name": "kitchen",
+            "description": "kitchen ware"
+        },
+        "productComments": [],
+        "status": "A",
+        "launchDate": "2024-07-09"
+    },
+    {
+        "id": 2,
+        "name": "Test Product 2",
+        "description": "A sample test product",
+        "price": 500.00,
+        "productCategory": {
+            "id": 1,
+            "name": "kitchen",
+            "description": "kitchen ware"
+        },
+        "productComments": [],
+        "status": "A",
+        "launchDate": "2024-07-09"
+    }
+]
+```
+
 
 ## Category Endpoint
 ### Create New category
