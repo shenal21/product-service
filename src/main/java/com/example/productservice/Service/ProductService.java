@@ -2,7 +2,6 @@ package com.example.productservice.Service;
 
 import com.example.productservice.DTO.ProductDTO;
 import com.example.productservice.Repository.ProductCategoryRepository;
-import com.example.productservice.Repository.ProductCommentRepository;
 import com.example.productservice.Repository.ProductRepository;
 import com.example.productservice.model.Product;
 import com.example.productservice.model.ProductCategory;
