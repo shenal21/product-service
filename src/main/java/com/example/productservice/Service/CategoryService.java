@@ -2,7 +2,7 @@ package com.example.productservice.Service;
 
 import com.example.productservice.DTO.CategoryDTO;
 import com.example.productservice.Repository.ProductCategoryRepository;
-import com.example.productservice.model.ProductCategory;
+import com.example.productservice.Model.ProductCategory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -3,8 +3,8 @@ package com.example.productservice.Service;
 import com.example.productservice.DTO.ProductDTO;
 import com.example.productservice.Repository.ProductCategoryRepository;
 import com.example.productservice.Repository.ProductRepository;
-import com.example.productservice.model.Product;
-import com.example.productservice.model.ProductCategory;
+import com.example.productservice.Model.Product;
+import com.example.productservice.Model.ProductCategory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

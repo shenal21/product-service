@@ -1,6 +1,6 @@
 package com.example.productservice.Repository;
 
-import com.example.productservice.model.Product;
+import com.example.productservice.Model.Product;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Pageable;

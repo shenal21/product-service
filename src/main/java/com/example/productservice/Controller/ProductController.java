@@ -2,7 +2,7 @@ package com.example.productservice.Controller;
 
 import com.example.productservice.DTO.ProductDTO;
 import com.example.productservice.Service.ProductService;
-import com.example.productservice.model.Product;
+import com.example.productservice.Model.Product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

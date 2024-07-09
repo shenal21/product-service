@@ -1,4 +1,4 @@
-package com.example.productservice.model;
+package com.example.productservice.Model;
 
 import java.math.BigDecimal;
 import java.util.Date;
