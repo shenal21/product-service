@@ -34,7 +34,7 @@ public class ProductController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<String> updateProduct(@PathVariable Long id, @RequestBody @Valid ProductDTO productDTO) {
+    public ResponseEntity<String> updateProduct(@PathVariable Long id, @RequestBody ProductDTO productDTO) {
         String status = productService.updateProduct(id, productDTO);
         return new ResponseEntity<>(status, status.equals("success") ? HttpStatus.OK : HttpStatus.BAD_REQUEST);
     }

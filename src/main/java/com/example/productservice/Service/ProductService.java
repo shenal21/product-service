@@ -27,8 +27,6 @@ public class ProductService {
     @Autowired
     private ProductCategoryRepository productCategoryRepository;
 
-    @Autowired
-    private ProductCommentRepository productCommentRepository;
 
     public String createProduct(ProductDTO productDTO) {
         ProductCategory category = productCategoryRepository.findByName(productDTO.getCategory());
@@ -55,10 +53,15 @@ public class ProductService {
         }
 
         Product product = optionalProduct.get();
-        product.setName(productDTO.getName());
-        product.setDescription(productDTO.getDescription());
-        product.setPrice(productDTO.getPrice());
-
+        if (productDTO.getName() != null) {
+            product.setName(productDTO.getName());
+        }
+        if (productDTO.getDescription() != null) {
+            product.setDescription(productDTO.getDescription());
+        }
+        if (productDTO.getPrice() != null) {
+            product.setPrice(productDTO.getPrice());
+        }
         productRepository.save(product);
         return "success";
     }
