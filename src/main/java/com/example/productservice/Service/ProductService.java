@@ -41,7 +41,7 @@ public class ProductService {
         product.setDescription(productDTO.getDescription());
         product.setPrice(productDTO.getPrice());
         product.setProductCategory(category);
-        product.setStatus("A");
+        product.setStatus("A"); //setting as active product with 'A'
         product.setLaunchDate(new Date());
 
         productRepository.save(product);
@@ -89,6 +89,7 @@ public class ProductService {
     }
 
     public List<Product> getPremiumProducts() {
-        return productRepository.findByPriceGreaterThanEqual(new BigDecimal(500));
+        BigDecimal premiumProductPriceFloorValue = BigDecimal.valueOf(500);
+        return productRepository.findByPriceGreaterThanEqual(premiumProductPriceFloorValue);
     }
 }
