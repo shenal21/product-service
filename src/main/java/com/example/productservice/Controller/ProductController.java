@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/products")
